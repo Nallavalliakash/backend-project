@@ -1,12 +1,12 @@
-import mongoose,{schema} from "mongoose"
+import mongoose,{Schema} from "mongoose"
 
-const tweetschema=new schema({
+const tweetschema=new Schema({
     content:{
         type:"string",
         required:true
     },
     owner:{
-        type:mongoose.Types.ObjectId,
+        type:Schema.Types.ObjectId,
         ref:"User"
     },
     

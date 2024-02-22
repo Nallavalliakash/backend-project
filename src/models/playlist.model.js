@@ -1,6 +1,6 @@
-import mongoose,{schema} from "mongoose"
+import mongoose,{Schema, SchemaTypeOptions} from "mongoose"
 
-const playlistschema=new schema({
+const playlistschema=new Schema({
     name:{
         type:"string",
         required:true
@@ -10,11 +10,11 @@ const playlistschema=new schema({
         required:true
     },
     videos:{
-        type:mongoose.Types.ObjectId,
+        type:Schema.Types.ObjectId,
         ref:'Video'
     },
     owner:{
-        type:mongoose.Types.ObjectId,
+        type:Schema.Types.ObjectId,
         ref:"User"
     }
 },{timestamps:true})
