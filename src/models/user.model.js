@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-const userschema = new mongoose.Schema(
+const userschema = new Schema(
   {
     username: {
       type: String,
